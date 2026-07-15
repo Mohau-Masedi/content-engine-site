@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Privacy Policy — Content Engine Publisher</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 640px; margin: 3rem auto; padding: 0 1.25rem; line-height: 1.6; color: #1a1a1a; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.1rem; margin-top: 2rem; }
+  footer { margin-top: 3rem; font-size: 0.85rem; color: #555; border-top: 1px solid #ddd; padding-top: 1rem; }
+  a { color: #0b5fff; }
+</style>
+</head>
+<body>
+  <h1>Privacy Policy — Content Engine Publisher</h1>
+  <p><em>Last updated: 15 July 2026.</em></p>
+
+  <h2>Who operates this app</h2>
+  <p>Content Engine Publisher is operated by Inlumi. The Information Officer under South Africa's Protection of Personal Information Act (POPIA) is Mohau Masedi, reachable at <a href="mailto:mohau.masedi@inlumi.com">mohau.masedi@inlumi.com</a>.</p>
+
+  <h2>What this app does</h2>
+  <p>Content Engine Publisher connects to the operator's own YouTube channel(s) via Google's OAuth authorization and the YouTube Data API, to upload video files and their metadata (titles, descriptions, thumbnails) that the operator has already reviewed and approved. It does not access or act on any YouTube account other than the one that explicitly grants it authorization.</p>
+
+  <h2>Data we access</h2>
+  <p>Through the Google OAuth grant, this app accesses:</p>
+  <ul>
+    <li>The authorizing YouTube channel's identity (channel ID, name).</li>
+    <li>The ability to upload videos and set their title, description, thumbnail, and visibility to that channel.</li>
+  </ul>
+  <p>This app does not request access to the account holder's personal Google account data beyond what's needed to identify and act on the authorized YouTube channel. It does not read private messages, contacts, or unrelated Google services.</p>
+
+  <h2>Data we store</h2>
+  <ul>
+    <li><strong>OAuth credentials</strong> (client ID, client secret, refresh token) — stored encrypted in a dedicated secrets manager, never in application code, logs, or version control.</li>
+    <li><strong>Video assets and metadata</strong> that the operator has authored or approved for publishing — stored encrypted at rest in the operator's own cloud infrastructure (AWS, region af-south-1).</li>
+    <li><strong>Publish records</strong> — which video was published to which channel, when, and under whose approval — kept as an audit trail (the provenance ledger).</li>
+  </ul>
+
+  <h2>Data we do not do</h2>
+  <p>We do not sell data. We do not share OAuth credentials or account data with any third party other than the infrastructure and API providers strictly necessary to run the pipeline (cloud hosting, and Google's own APIs to perform the upload itself). We do not use this access for advertising, profiling, or any purpose beyond publishing operator-approved videos.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>Publish records and provenance-ledger entries are retained indefinitely as an audit trail, consistent with platform-compliance obligations. OAuth credentials are retained until the operator revokes access (via Google Account permissions or by request to the Information Officer) or rotates them. To request deletion of data associated with your account, contact the Information Officer above.</p>
+
+  <h2>International transfer</h2>
+  <p>Data is processed and stored in South Africa (AWS af-south-1) by default. Where a service provider (such as Google, for the API call itself) processes data outside South Africa, that transfer is limited to what's strictly necessary to perform the requested action (the video upload) and is governed by that provider's own data-processing terms.</p>
+
+  <h2>Your rights</h2>
+  <p>Under POPIA, you may request access to, correction of, or deletion of personal information this app holds about you, and may object to its processing. Contact the Information Officer above to exercise these rights.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>This policy may be updated as the service evolves. Material changes will be reflected here with an updated "last updated" date.</p>
+
+  <footer>
+    Contact: <a href="mailto:mohau.masedi@inlumi.com">mohau.masedi@inlumi.com</a> · <a href="index.html">Home</a> · <a href="terms.html">Terms of Service</a>
+  </footer>
+</body>
+</html>
